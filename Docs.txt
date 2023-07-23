@@ -1,0 +1,31 @@
+Upon observing the data, we see that there are only 204 non null values of Cabin field of the total 891. So no matter what we do we wont be able to fill the field properly so a better approach will be to drop the entire field. 
+Also name seems to be an irrelevant feature for the objective of the problem so we will also drop it.
+Also it seems that the Ticket Number field is of no use as it doesn't matter too much which number you get on ticket.
+
+Now onto Analysing the different fields we can see that there is a good relataion between the "class of passenger" and "Survival Rate". 
+
+Survived	0	1
+Pclass		
+1	37.037037	62.962963
+2	52.717391	47.282609
+3	75.763747	24.236253
+
+
+Hence we have a strong relation between Survived people and their class. It seems People in better class survive more than the people in lower class.
+Also one more thing that is clear is that more percent of female survived compared to the percent of male survived.
+
+One more thing comes clear as we plot Age and Sex together using seaborn.stripplot and using hue for survivablity. The male in age group of 15-40 are less likely to survive than others. But the case is inverse for Female.
+
+Another thing that comes into notice is that people in Siblings group like 5 or 8 members didnt survive. But it is not that solo ones survived the most. Instead the duos survived the most. See plot for more details.
+
+Also there is somewhat similar trend for the Parch i.e. count of parents they are with
+
+Now on basis of Location of where they embarked, results 
+
+Survived	0	1
+Embarked		
+C	44.642857	55.357143
+Q	61.038961	38.961039
+S	66.304348	33.695652
+
+So people from C survived more than others. This completes our analysis and now we move to check the correlaions of the dataset.
